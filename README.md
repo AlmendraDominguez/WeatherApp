@@ -1,5 +1,5 @@
 # WeatherApp
-Este es un proyecto de aplicación web que te permite consultar el clima actual y el pronóstico extendido en tu ubicación, así como en otras localizaciones en todo el mundo. También ofrece la posibilidad de guardar tus ciudades favoritas para un acceso rápido a la información.
+Este es un proyecto de aplicación web que te permite consultar el clima actual y el pronóstico extendido en tu ubicación, así como en otras localizaciones en todo el mundo. También ofrece la posibilidad de guardar tus ciudades favoritas para un acceso rápido a la información. Fue realizado en el marco de la emulación de trabajo organizada por No Country, y el resultado es producto de un extenso trabajo en equipo que se extendió por 5 semanas. Dicho equipo constó de una tester, una diseñadora UX/UI y dos desarrolladores frontend.
 
 ## Tecnologías Utilizadas
 * Node.js: Utilizado para la configuración del servidor.
@@ -23,7 +23,6 @@ Este es un proyecto de aplicación web que te permite consultar el clima actual 
 * Guardado de Ciudades Favoritas: Los usuarios pueden guardar ciudades en sus favoritos para acceder rápidamente a la información del clima de sus ubicaciones frecuentes.
 
 ## Links útiles
-* Figma: https://www.figma.com/file/4uIue0Z43txqbDIbbiqXSQ/Weather-Web-App?type=design&node-id=0-1&mode=design&t=KTnAnjPw1p2iQJg3-0
 * Presentación YouTube: https://www.youtube.com/watch?v=FUJjrcEY2E4
 * Deploy: https://weatherapp-39.netlify.app/
  
