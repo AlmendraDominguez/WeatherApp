@@ -1,0 +1,43 @@
+.loginContainer {
+    padding: 30px 30px 50px 30px;
+    margin-top: 200px;
+    width: 70%;
+    min-height: 800px;
+}
+
+.lines-container {
+
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.line {
+    width: 40%;
+    /* height: 1px; */
+    border-top: 1px solid black;
+}
+
+.circle {
+    width: 15px;
+    height: 15px;/* 
+	@@ -31,10 +38,19 @@ */
+}
+
+@media (max-width: 375px) {
+    .loginContainer {
+        padding: 10px; /* Ajusta el espaciado para pantallas muy pequeñas */
+        width: 100%; /* Ocupa el ancho completo en pantallas pequeñas */
+    }
+    
+    .custom-opacity-bg, .form-floating input {
+        width: 100%; /* Ocupa el ancho completo en pantallas pequeñas */
+        font-size: 14px; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+    }
+    html {
+        background-size: cover; 
+    }
+}

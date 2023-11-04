@@ -1,0 +1,248 @@
+.fav_locations_container {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: auto;
+    width: 80%;
+}
+ .fav_locations {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 10px; 
+    width: 80%;
+} 
+
+ .favLocations_item {
+    background-color: rgba(255,255,255,0.1); 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    height: 200px;
+    width: 140px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;   
+}
+.favLocations_item:hover {
+    background-color:rgba(39,56,89,0.2);
+} 
+
+.corazon_container {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    cursor: pointer;
+    width: 50px;   
+}
+.heart_buttons {
+    border: none;
+    background: none;
+    width: 25px;
+}
+.arrows_container_2 {
+    position: absolute;
+    right: 15%;
+    width: 10vw;
+    display: flex;
+    justify-content: space-between;
+    z-index: 200;
+}
+.arrows {
+    background: none;
+    border: none;
+}
+.arrows > img{
+    width: 20px;
+}
+
+.arrows_h5_container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    width: 60%;
+}
+
+@media (min-width: 280px) {
+    .fav_locations_container {
+        height: 300px;
+        margin-top: 0;
+    }
+    .fav_locations {
+
+        justify-content: center;
+    }
+    .favLocations_item {
+       width: 40vw;
+        
+    }
+    .arrows_h5_container {
+        width: 100%;
+        flex-direction: column;
+       
+    }
+    .arrows_container_2 {
+      
+        /* right: 25%; */
+        position: initial;
+        width: 23vw;
+        margin: auto;
+        margin-top: 10px;
+    }
+ }
+
+@media (min-width: 400px) {
+    .fav_locations_container {
+        height: 330px;
+        margin-top: 0;
+    }
+    .fav_locations {
+        
+        justify-content: center;
+    }
+    .favLocations_item {
+        width: 30vw;
+         
+     }
+   
+    .arrows_h5_container {
+        width: 100%;
+        flex-direction: column;
+       
+    }
+    .arrows_container_2 {
+      
+        /* right: 25%; */
+        position: initial;
+        width: 23vw;
+        margin: auto;
+        margin-top: 10px;
+    }
+
+    /* .map {
+       
+       
+
+    } */
+
+}
+
+@media (min-width: 576px) { 
+    .fav_locations_container {
+        height: 360px;
+        margin-top: 0;
+    }
+
+    .fav_locations {
+        
+        justify-content: center;
+    }
+    .arrows_h5_container {
+        width: 100%;
+        flex-direction: column;
+       
+    }
+    .arrows_container_2 {
+      
+        position: initial;
+        width: 23vw;
+        margin: auto;
+        margin-top: 10px;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .fav_locations_container {
+        align-items: center;
+    }
+    .fav_locations {
+        justify-content: center;
+    }
+    .favLocations_item {
+        width: 15vw;
+     }
+    .arrows_h5_container {
+        width: 100%;
+        justify-content: space-between;
+        height: 100px;
+        margin-top: 15px;
+        width: 70%;
+    }
+    .arrows_container_2 {
+        right: 0;
+        width: 12vw;
+         margin-top: 10px; 
+    }
+ }
+
+@media (min-width: 992px) {
+    .fav_locations_container {
+        height: 280px;
+        margin-top: 0;
+       
+    }
+    .fav_locations {
+        justify-content: center;
+       
+        
+    }
+    .favLocations_item {
+        width: 12vw;
+     }
+
+    .arrows_h5_container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        flex-direction: row;
+        align-items: center;
+        width: 55%;
+        margin-right: 35%; 
+       
+    }
+    .arrows_container_2 {
+        right: 5%;
+        position: absolute;
+      
+    }
+   
+ }
+@media (min-width: 1500px) {
+   .fav_locations_container {
+        margin-top: 10px;
+        position: relative;
+        width: 70%;
+        margin-right: 12%;
+        align-items: flex-start;
+        height: 300px;
+   }
+    .arrows_h5_container {
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        width: 60%;
+        margin-top: 1%;  
+    }
+    .arrows_container_2 {
+         position: absolute;
+        right: 5%; 
+        top: 1%;
+        width: 7vw;
+        display: flex;
+        justify-content: space-between;
+        z-index: 200;
+    }
+   
+ }
+ @media (min-width: 280px) {
+    .other_info_max_container { 
+        
+         padding-left: 20px;
+        /* margin: auto */
+     }
+ }
+    
+

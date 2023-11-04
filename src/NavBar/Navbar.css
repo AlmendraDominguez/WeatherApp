@@ -1,0 +1,24 @@
+.registrationButton {
+    background-color: rgba(57,101,144,255);
+    color: whitesmoke;
+}
+
+.loginButton {
+    background-color: rgba(76,142,173,255);
+}
+@media (min-width: 250px) and (max-width: 576px) {
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+      }
+    .navLinks {
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        align-self: center;    
+       
+    }
+    
+  }
+  
+

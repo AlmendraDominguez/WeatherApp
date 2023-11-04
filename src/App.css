@@ -1,0 +1,105 @@
+#root {
+  /* margin: 0;
+  padding: 0; */
+  text-align: center;
+  
+}
+.AppContainer {
+  min-width: 98vw;
+ 
+  
+  
+}
+
+ 
+.navbar {
+  
+   height: 400px; 
+  width: 5vw;
+ 
+  height: 20px;
+  position: absolute;
+   /* left: 2%; 
+  top: 1%; */
+
+
+} 
+
+
+.main_app {
+  
+  width: 100%;
+  
+ 
+ 
+
+}
+
+
+
+
+
+@media (min-width: 250px) {
+  .navbar {
+    /* left: 38%; */
+   
+    height: 100px;
+    
+    top: -1%;
+    width: 50px;
+   
+  }
+}
+
+@media (min-width: 400px) {
+   .navbar {
+    /* left: 100%;
+    top: -12%;
+    */
+    top: -1%;
+    width: 70px;
+    
+  } 
+}
+@media (min-width: 576px) {
+  .navbar {
+    left: 4%;
+    top: 3%;
+  }
+ }
+@media (min-width: 768px) {
+  .navbar {
+    left: 4%;
+    top: 2%;
+  }
+ }
+@media (min-width: 992px) {
+  .navbar {
+  
+    height: 400px;
+    width: 5vw;
+  
+    position: absolute;
+    left: 2%;
+    top: 1%;
+    
+ }
+ }
+@media (min-width: 1500px) {
+
+  .navbar {
+  
+    height: 400px;
+    width: 5vw;
+  
+    position: absolute;
+    left: 2%;
+    top: 1%;
+ }
+}
+
+@media (min-width: 250px) and (max-width: 576px) {
+  .AppContainer {
+    justify-content: center;
+  }
+}
