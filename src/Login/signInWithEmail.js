@@ -9,7 +9,7 @@ export const SignInWithEmail = (email,password, navigate) => {
   signInWithEmailAndPassword(auth, email, password)
   .then(() => {
       console.log("Ingreso Correcto");
-      navigate("/home")
+      navigate("/WeatherApp/home")
   })
     .catch ((error) => {
       const errorCode = error.code

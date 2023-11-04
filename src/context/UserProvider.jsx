@@ -15,7 +15,6 @@ export const UserProvider = ({children}) => {
     })
     const [favLocations, setFavLocations] = useState([])
 
-
     useEffect(() => {   
     
       onAuthStateChanged(auth, (user) => {
@@ -31,11 +30,9 @@ export const UserProvider = ({children}) => {
   return (
     <UserContext.Provider 
         value={{signedUser,
-                favLocations,
-                setFavLocations      
-                
-                
-                }}>
+          favLocations,
+          setFavLocations
+        }}>
         {children}
     </UserContext.Provider>
   )

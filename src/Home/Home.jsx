@@ -29,6 +29,7 @@ const Home = ({ scrollToSection }) => {
         long: "-43.59375;2"
     })
     const [scrolling, setScrolling] = useState(false);
+    
     useEffect(() => {
         if (scrollToSection) {
           const sectionRef = document.getElementById("sectionToScrollTo");
@@ -36,12 +37,12 @@ const Home = ({ scrollToSection }) => {
             sectionRef.scrollIntoView({ behavior: "smooth" });
           }
         }
-      }, [scrollToSection]);
+    }, [scrollToSection]);
 
     const handleNextSlide = () => {
         setSlide((slide) => slide === slider ? slide = 0 : slide + 1)
-
     }
+
     const handlePrevSlide = (arr) => {
         setSlide((slide) => slide === 0 ? slide = slider : slide - 1)
     }
@@ -81,14 +82,12 @@ const Home = ({ scrollToSection }) => {
 
     const getLocations = async (uid) => {
         const querySnapshot = await getDocs(collection(db, `/Clientes/${uid}/Favoritos`));
-        // console.log(querySnapshot);
         setFavLocations(querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })))
     }
     
     const handleHearts = (city) => {
            let tieneValorEspecifico = favLocations.some(element => Object.values(element).includes(city));
-           setCorazonState(tieneValorEspecifico)
-          
+           setCorazonState(tieneValorEspecifico) 
     }
 
     const toggleForecastCollapse = () => {
@@ -126,7 +125,7 @@ const Home = ({ scrollToSection }) => {
     }, [city]); 
 
     useEffect(() => {
-        handleHearts(data ? data.location.name : "")
+        handleHearts(currentWeatherData ? currentWeatherData.location.name : data ? data.location.name : "")
     }, [favLocations]);
 
     useEffect(() => {
@@ -136,9 +135,10 @@ const Home = ({ scrollToSection }) => {
     return (
         <div className="home_container container-fluid justify-content-center m-0 p-0">
             <div className='d-flex text-center justify-content-center pt-5 searchDiv'>
-                <input className="form-control custom-opacity-bg shadow-lg w-50 border-0" placeholder="El clima en..." onChange={(e) => { setCity(e.target.value) }} />
-{/*                 <button type="submit" className="btn ms-2 btn-outline-light rounded-pill" onClick={getCurrentWeatherData} variant="primary"><BsSearch/></button>
- */}            </div>
+                <input className="form-control custom-opacity-bg shadow-lg w-50 border-0" 
+                    placeholder="El clima en..." onChange={(e) => { setCity(e.target.value) }}
+                />
+            </div>
             <h2 className="titleName mb-5 pb-3 mt-3">¡Hola {signedUser.displayName}!</h2>
             {!searchPerformed ? (
                 <CurrentLocationWeather data={data} showDays={showDays} 
@@ -146,14 +146,14 @@ const Home = ({ scrollToSection }) => {
                     handleNextSlide={handleNextSlide} slide={slide} 
                     formatLocalTime={formatLocalTime} corazonState={corazonState} 
                     signedUser={signedUser} toggleForecastCollapse={toggleForecastCollapse} 
-                    isForecastCollapsed={isForecastCollapsed}/>
+                    isForecastCollapsed={isForecastCollapsed} setCorazonState={setCorazonState}/>
             ) : (
                 <OtherLocationWeather currentWeatherData={currentWeatherData} city={city} 
                     showDays={showDays} handleSliders={handleSliders} 
                     handlePrevSlide={handlePrevSlide} handleNextSlide={handleNextSlide} 
                     slide={slide} formatLocalTime={formatLocalTime} corazonState={corazonState} 
                     signedUser={signedUser} toggleForecastCollapse={toggleForecastCollapse} 
-                    isForecastCollapsed={isForecastCollapsed}/>
+                    isForecastCollapsed={isForecastCollapsed} setCorazonState={setCorazonState}/>
                         
             )}
             <div id="sectionToScrollTo">

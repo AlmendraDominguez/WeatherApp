@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import './index.css'
 import './Login/login.css'
 import './Home/home.css'
 import { UserProvider } from './context/UserProvider.jsx'

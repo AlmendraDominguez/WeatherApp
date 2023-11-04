@@ -10,7 +10,6 @@ const signInWithGoogle = async(navigate) => {
     try {
         const result = await signInWithPopup(auth, googleProvider);
         const credential = GoogleAuthProvider.credentialFromResult(result)
-       // console.log({ credential });
        const user = result.user
 
        setDoc(doc(db, "Clientes", user.uid), {
@@ -18,7 +17,7 @@ const signInWithGoogle = async(navigate) => {
         Email: user.email
       })
        
-       navigate("/home");
+       navigate("/WeatherApp/home");
        return {
         ok: true,
         user,
@@ -31,7 +30,6 @@ const signInWithGoogle = async(navigate) => {
         const email = error.customData.email;
         
         const credential = GoogleAuthProvider.credentialFromError(error);
-       // console.log({credential});
        return {
         ok: false,
         errorMessage

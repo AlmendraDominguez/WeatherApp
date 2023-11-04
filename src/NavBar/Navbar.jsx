@@ -14,7 +14,7 @@ const LogInLinks = ({setScrollToSection  }) => {
   const isUserLoggedIn = user !== null;
 
   const handleScrollToSection = () => {
-    setScrollToSection (true); // Cambia el estado de Home para desplazarse
+    setScrollToSection (true);
   };
 
   if (!isUserLoggedIn) {
@@ -24,18 +24,18 @@ const LogInLinks = ({setScrollToSection  }) => {
   } else {
     return (
       <div className="nav-links mt-4">
-        <NavLink to="/home" className="m-3 nav-link">
+        <NavLink to="/WeatherApp/home" className="m-3 nav-link">
           <button type="button" className="btn btn-outline-dark buttonHover rounded-pill">
             <AiOutlineHome/>
           </button>
         </NavLink>
-        <NavLink to="/home" className="m-3 nav-link">
+        <NavLink to="/WeatherApp/home" className="m-3 nav-link">
           <button type="button" className="btn btn-outline-dark buttonHover rounded-pill"
           onClick={handleScrollToSection}>
             <FaHeart />
           </button>
         </NavLink>
-        <NavLink to="/signOut" className="m-3 nav-link">
+        <NavLink to="/WeatherApp/signOut" className="m-3 nav-link">
           <button type="button" className="btn btn-outline-dark buttonHover rounded-pill">
             <FaSignOutAlt/>
           </button>

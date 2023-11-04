@@ -12,7 +12,6 @@ export const UpdatePosition = ({setUserPosition}) => {
     function getPosition() {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(success)
-        //     console.log("ubicacion obtenida");
         } else { "No se pudo obtener la ubicacion" }
     }
     const handlePosition = () => {
@@ -23,7 +22,10 @@ export const UpdatePosition = ({setUserPosition}) => {
        console.log(loading);
     }
   return (
-    <button className={loading ? 'update_btn active_update' : "update_btn"} onClick={handlePosition}>
+    <button 
+        className={loading ? 'update_btn active_update' : "update_btn"} 
+        onClick={handlePosition}
+    >
         <img src="./iconos/update3.png" alt="" />
     </button>
   )

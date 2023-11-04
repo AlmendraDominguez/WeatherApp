@@ -14,7 +14,7 @@
     width: 80%;
 } 
 
- .favLocations_item {
+.favLocations_item {
     background-color: rgba(255,255,255,0.1); 
     display: flex;
     flex-direction: column;
@@ -29,7 +29,6 @@
 .favLocations_item:hover {
     background-color:rgba(39,56,89,0.2);
 } 
-
 .corazon_container {
     position: absolute;
     bottom: 12px;
@@ -57,7 +56,6 @@
 .arrows > img{
     width: 20px;
 }
-
 .arrows_h5_container {
     display: flex;
     justify-content: space-around;
@@ -71,21 +69,16 @@
         margin-top: 0;
     }
     .fav_locations {
-
         justify-content: center;
     }
     .favLocations_item {
        width: 40vw;
-        
     }
     .arrows_h5_container {
         width: 100%;
         flex-direction: column;
-       
     }
     .arrows_container_2 {
-      
-        /* right: 25%; */
         position: initial;
         width: 23vw;
         margin: auto;
@@ -99,34 +92,22 @@
         margin-top: 0;
     }
     .fav_locations {
-        
         justify-content: center;
     }
     .favLocations_item {
         width: 30vw;
-         
-     }
+    }
    
     .arrows_h5_container {
         width: 100%;
         flex-direction: column;
-       
     }
     .arrows_container_2 {
-      
-        /* right: 25%; */
         position: initial;
         width: 23vw;
         margin: auto;
         margin-top: 10px;
     }
-
-    /* .map {
-       
-       
-
-    } */
-
 }
 
 @media (min-width: 576px) { 
@@ -136,23 +117,19 @@
     }
 
     .fav_locations {
-        
         justify-content: center;
     }
     .arrows_h5_container {
         width: 100%;
         flex-direction: column;
-       
     }
     .arrows_container_2 {
-      
         position: initial;
         width: 23vw;
         margin: auto;
         margin-top: 10px;
     }
 }
-
 
 @media (min-width: 768px) {
     .fav_locations_container {
@@ -163,7 +140,7 @@
     }
     .favLocations_item {
         width: 15vw;
-     }
+    }
     .arrows_h5_container {
         width: 100%;
         justify-content: space-between;
@@ -174,7 +151,7 @@
     .arrows_container_2 {
         right: 0;
         width: 12vw;
-         margin-top: 10px; 
+        margin-top: 10px; 
     }
  }
 
@@ -182,17 +159,13 @@
     .fav_locations_container {
         height: 280px;
         margin-top: 0;
-       
     }
     .fav_locations {
         justify-content: center;
-       
-        
     }
     .favLocations_item {
         width: 12vw;
-     }
-
+    }
     .arrows_h5_container {
         display: flex;
         justify-content: space-between;
@@ -201,15 +174,13 @@
         align-items: center;
         width: 55%;
         margin-right: 35%; 
-       
     }
     .arrows_container_2 {
         right: 5%;
         position: absolute;
-      
     }
-   
- }
+}
+
 @media (min-width: 1500px) {
    .fav_locations_container {
         margin-top: 10px;
@@ -235,13 +206,11 @@
         justify-content: space-between;
         z-index: 200;
     }
-   
  }
+
  @media (min-width: 280px) {
     .other_info_max_container { 
-        
          padding-left: 20px;
-        /* margin: auto */
      }
  }
     

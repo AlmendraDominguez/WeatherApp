@@ -56,7 +56,6 @@ export const OtherInfo = ({ data }) => {
       ) : (
         ""
       )}
-      <div></div>
     </div>
   );
 };

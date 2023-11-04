@@ -3,7 +3,6 @@
 * {
     font-family: 'Roboto Flex', sans-serif;
 }
-
 body {
     background-image: url("../assets/imagen2.jpg");
     background-size: cover;
@@ -12,18 +11,15 @@ body {
     min-height: 100px;
     display: flex;
 }
-
 .registrationContainer{
     padding: 30px 30px 50px 30px;
     margin-top: 200px;
     width: 70%;
 }
-
 .buttonHover:hover {
     background-color: #273859;
     color: black;
 }
-
 .custom-opacity-bg {
     background-color: rgba(255, 255, 255, 0.25); 
     color: black; 
@@ -36,7 +32,7 @@ body {
     color: red;
 }
 
-@media (max-width: 440px) {
+@media (max-width: 550px) {
     html {
         background-size: cover; 
     }
@@ -47,13 +43,13 @@ body {
 
 @media (max-width: 375px) {
     .registrationContainer {
-        padding: 10px; /* Ajusta el espaciado para pantallas muy pequeñas */
-        width: 100%; /* Ocupa el ancho completo en pantallas pequeñas */
+        padding: 10px;
+        width: 100%; 
     }
     
     .custom-opacity-bg, .form-floating input {
-        width: 100%; /* Ocupa el ancho completo en pantallas pequeñas */
-        font-size: 14px; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+        width: 100%; 
+        font-size: 14px;
     }
     html {
         background-size: cover; 

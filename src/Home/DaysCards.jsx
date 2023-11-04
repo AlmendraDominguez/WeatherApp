@@ -18,16 +18,10 @@ export const DaysCards = ({city, slide}) => {
           console.log("ubicacion obtenida");
       } else { "No se pudo obtener la ubicacion" }
   }
-  // 5437eae8999f4d86880185553231910
 
     const URL = `https://api.weatherapi.com/v1/forecast.json?key=519125c955044ba5924184548230211&q=${city || userPosition}&days=10&aqi=no&alerts=no`
 
-  //  const URL = `https://api.weatherapi.com/v1/forecast.json?key=5437eae8999f4d86880185553231910&q=${city || userPosition}&days=10&aqi=no&alerts=no`
     const {data} = useFetch(URL)
-    // console.log(data);
-    // console.log("USERPOSITION");
-    // console.log(userPosition);
-
 
     const nameDay = (param)=> {
         const diasSemana = [ 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado','Domingo'];

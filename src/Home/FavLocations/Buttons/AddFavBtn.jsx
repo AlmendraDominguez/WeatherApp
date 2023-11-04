@@ -23,8 +23,7 @@ export const AddFavBtn = ({uid,cityName}) => {
 
   return (
     <button onClick={()=> addFavLocations(uid,cityName)} className='heart_buttons'>
-
-    <img src="./iconos/corazon.png" alt="Agregar a Favoritos" />
+      <img src="./iconos/corazon.png" alt="Agregar a Favoritos" />
     </button>
   )
 }

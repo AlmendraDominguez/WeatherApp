@@ -55,41 +55,38 @@ const Registration = () => {
             setPasswordError("Contraseña inválida. Requisitos: 8 a 15 caracteres, incluir 1 mayúscula, 1 minúscula, 1 número y 1 caracter especial (+ - ! @)");
             return;
           } else {
-            setPasswordError(""); // Limpia el mensaje de error si el campo es válido.
+            setPasswordError(""); 
         }
         if (!validateEmail()) {
             setEmailError("Correo electrónico inválido");
             return;
         } else {
-            setEmailError(""); // Limpia el mensaje de error si el campo es válido.
+            setEmailError(""); 
         }
         if (!userNumber || userNumber.length < 10) {
             setUserNumberError("El número es inválido");
             return;
         } else {
-            setUserNumberError(""); // Limpia el mensaje de error si el campo es válido.
+            setUserNumberError("");
         }
-    
         if (!userLastName) {
             setUserLastNameError("El apellido es requerido");
             return;
         } else {
-            setUserLastNameError(""); // Limpia el mensaje de error si el campo es válido.
+            setUserLastNameError(""); 
         }
         if (!userName) {
             setUserNameError("El nombre es requerido");
             return;
         } else {
-            setUserNameError(""); // Limpia el mensaje de error si el campo es válido.
+            setUserNameError("");
         }
-    
         if (userPassword !== userRepeatPassword) {
             setRepeatPasswordError("Las contraseñas no coinciden");
             return;
         } else {
-            setRepeatPasswordError(""); // Limpia el mensaje de error si el campo es válido.
+            setRepeatPasswordError("");
         }
-
         createUserWithEmailAndPassword(auth, userEmail, userPassword)
         .then((userCredential) => {
             const user = userCredential.user;
@@ -100,19 +97,14 @@ const Registration = () => {
               Telefono: userNumber,
               Contraseña: userPassword,
             })
-              //ensure we catch any errors at this stage to advise us if something does go wrong
               .catch((error) => {
                 console.log("Something went wrong with sign up: ", error);
                 alert(`¡Email inválido! Es posible que ya exista una cuenta asociada a este correo electrónico. Por favor, revisa tus datos`);
               });
-            navigate("/home");
+            navigate("/WeatherApp/home");
           })
         console.log(newUser);
     };
-
-    
-
-
 
     const validatePassword = () => {
         let validate_password = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[!+@-])(?=.*\d).{8,15}$/;
@@ -122,18 +114,17 @@ const Registration = () => {
         const validador_email = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
         return validador_email.test(userEmail);
     };
-
-
+    
     return (
         <>
         <div className="registrarse">
             <div className="nav-links d-flex justify-content-center LoginRegistration">
-                <NavLink to="/login" className="m-3 nav-link">
+                <NavLink to="/WeatherApp/login" className="m-3 nav-link">
                 <button type="button" className="btn btn-outline-white buttonHover rounded-pill loginButton">
                     Iniciar Sesión
                 </button>
                 </NavLink>
-                <NavLink to="/" className="m-3 nav-link">
+                <NavLink to="/WeatherApp/" className="m-3 nav-link">
                 <button type="button" className="btn btn-outline-secondary buttonHover rounded-pill registrationButton">
                     Registrarme
                 </button>
@@ -143,7 +134,6 @@ const Registration = () => {
 
         <div className="container-fluid registrationContainer mt-3">
                 <h2 className="title pb-4">Registrarme</h2>
-
                 <div className="row registrationLogin mb-3">
                     <div className="col-12 m-0 pb-2">
                         <button className="btn border-0 google col-12 border border-secondary shadow buttonHover" onClick={() => SignInWithGoogle(navigate)}>
@@ -218,7 +208,6 @@ const Registration = () => {
                             {userNumberError && <p style={{ color: "red" }}>{userNumberError}</p>}
                         </div>
                     </div>
-
                     
                     <div className="row registrationPassword">
                         <div className="form-floating">
@@ -267,7 +256,12 @@ const Registration = () => {
                     </div>
                     
                     <div className="row p-2 registrationSubmitButton">
-                        <button type="submit" className="btn border-0 rounded col-12 shadow-lg rounded-pill border-0 buttonHover" disabled={userPassword.length < 8} onClick={submit}>Registrarme</button>
+                        <button type="submit" className="btn border-0 rounded col-12 shadow-lg rounded-pill border-0 buttonHover" 
+                            disabled={userPassword.length < 8}
+                            onClick={submit}
+                        >
+                            Registrarme
+                        </button>
                     </div>
                 </form>
         </div>

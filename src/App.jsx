@@ -21,12 +21,11 @@ function App() {
         <nav className="navbar"><NavBar setScrollToSection={setScrollToSection}/></nav>
         <div className="main_app">
           <Routes>
-            <Route path='/' element={<Registration/>}/>
-            <Route path='/login' element={<Login/>}/>
-            <Route path='/home' element={<Home scrollToSection={scrollToSection}/>}/>
-            <Route path='/signOut' element={<SignOut/>}/>
-            <Route path='/forecast' element={<Forecast/>}/>
-            {/* <Route path='/forecast/:city' element={<Forecast/>}/> */}
+            <Route path='/WeatherApp/' element={<Registration/>}/>
+            <Route path='/WeatherApp/login' element={<Login/>}/>
+            <Route path='/WeatherApp/home' element={<Home scrollToSection={scrollToSection}/>}/>
+            <Route path='/WeatherApp/signOut' element={<SignOut/>}/>
+            <Route path='/WeatherApp/forecast' element={<Forecast/>}/>
           </Routes>
           </div>
         </BrowserRouter>
@@ -36,8 +35,4 @@ function App() {
   )
 }
 
-
 export default App
-
-
-

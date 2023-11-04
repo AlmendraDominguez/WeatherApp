@@ -42,12 +42,12 @@ const Login = () => {
         <>
         <div>
             <div className="nav-links d-flex justify-content-center LoginRegistration">
-                <NavLink to="/login" className="m-3 nav-link">
+                <NavLink to="/WeatherApp/login" className="m-3 nav-link">
                 <button type="button" className="btn btn-outline-white buttonHover rounded-pill loginButton">
                     Iniciar Sesión
                 </button>
                 </NavLink>
-                <NavLink to="/" className="m-3 nav-link">
+                <NavLink to="/WeatherApp/" className="m-3 nav-link">
                 <button type="button" className="btn btn-outline-secondary buttonHover rounded-pill registrationButton">
                     Registrarme
                 </button>
@@ -80,7 +80,6 @@ const Login = () => {
                 <div className="row">
                     <div className="col mb-3 me-0">
                         <div className="form-floating">
-                        {/* <FaUserAlt style={{ background: "none", marginRight: "7px" }} /> */}
                             <input type="email" 
                                 placeholder="correo electronico"
                                 className="form-control custom-opacity-bg shadow-lg"

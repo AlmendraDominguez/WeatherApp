@@ -2,8 +2,27 @@
     position: absolute;
     top: 2px;
     left: 30px;
-   
 }
 .logo >img {
     width: 100px;
+}
+.logo1 {
+    position: absolute;
+    top: 2px;
+    left: 30px;
+}
+.logo1 >img {
+    width: 100px;
+}
+
+@media (min-width: 250px) and (max-width: 400px){
+    .logo1{
+        left: 35%;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 550px) {
+    .logo1{
+        left: 40%;
+    }
 }

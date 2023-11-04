@@ -12,12 +12,10 @@ const SignOut = () => {
     if (signedUser !== null) {
         signOut(auth).then(() => {
             console.log("Cerraste sesion");
-            navigate('/')
+            navigate('/WeatherApp/')
             }).catch((error) => {
             console.log("Error: ", error);
         });
     }
-
-   
 }
 export default SignOut;

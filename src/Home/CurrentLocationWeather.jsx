@@ -7,8 +7,7 @@ import { DelFavBtn } from './FavLocations/Buttons/DelFavBtn'
 import Forecast from '../Forecast'
 import { DaysCards } from './DaysCards'
 
-const CurrentLocationWeather = ({data, showDays, handleSliders, handlePrevSlide, handleNextSlide, slide, formatLocalTime, corazonState, signedUser, toggleForecastCollapse, isForecastCollapsed}) => {
-   
+const CurrentLocationWeather = ({data, showDays, handleSliders, handlePrevSlide, handleNextSlide, slide, formatLocalTime, corazonState, signedUser, toggleForecastCollapse, isForecastCollapsed, setCorazonState}) => {
   return (
     <div className="w-100">
         <div className="currentWeather">
@@ -43,53 +42,50 @@ const CurrentLocationWeather = ({data, showDays, handleSliders, handlePrevSlide,
                             } 
                         </div>
                     </div>
-                ) : "No se encontro informacion"}   
+            ) : "No se encontro informacion"}   
         </div>
-                    <div className="days_arrows_container">
-                        <div className="days_container">
-                            <span className={showDays ? "disable_days me-1" : "active_days"} onClick={handleSliders}>Hoy</span>
-                            <span className={showDays ? "active_days me-1" : "disable_days"}  onClick={handleSliders}>10 dias</span>
-                        </div>
-                        <div className='arrows_container'>
-                            <button onClick={handlePrevSlide} className='arrows'><img src="./iconos/left_arrow.png" alt="Deslizar a  la izquierda" /></button>
-                            <button onClick={handleNextSlide} className='arrows'><img src="./iconos/right_arrow.png" alt="Deslizar a la derecha" /></button>
+        <div className="days_arrows_container">
+            <div className="days_container">
+                <span className={showDays ? "disable_days me-1" : "active_days"} onClick={handleSliders}>Hoy</span>
+                <span className={showDays ? "active_days me-1" : "disable_days"}  onClick={handleSliders}>10 dias</span>
+            </div>
+            <div className='arrows_container'>
+                <button onClick={handlePrevSlide} className='arrows'><img src="./iconos/left_arrow.png" alt="Deslizar a  la izquierda" /></button>
+                <button onClick={handleNextSlide} className='arrows'><img src="./iconos/right_arrow.png" alt="Deslizar a la derecha" /></button>
+            </div>
+        </div>
+        <div className="lineHome"></div>
+        <div className="w-75" style={{margin: "auto"}}>
+            { showDays ? 
+                <DaysCards
+                    city={data.location.name}
+                    slide={slide}
+                />
+                :
+                <HoursCards
+                    data={data}
+                    slide={slide}
+                />
+            }
+            {data && data.location && (
+                <div className='collapseForecast'>
+                    <button
+                        className="btn btn-outline-dark buttonHover rounded-pill mt-3"
+                        type="button"
+                        onClick={toggleForecastCollapse}
+                    >
+                        Ver Pronóstico Extendido
+                    </button>
+                    <div className={`collapse ${isForecastCollapsed ? '' : 'show'}`} id="collapseExample">
+                        <div className="card card-body forecastContainer">
+                            <Forecast city={data.location.name} />
                         </div>
                     </div>
-              <div className="lineHome"></div>
-                    <div className="w-75" style={{margin: "auto"}}>
-
-                   
-
-                        { showDays ? 
-                            <DaysCards
-                                city={data.location.name}
-                                slide={slide}
-                            />
-                            :
-                            <HoursCards
-                                data={data}
-                                slide={slide}
-                            />
-                        }
-                        {data && data.location && (
-                            <div className='collapseForecast'>
-                                <button
-                                    className="btn btn-outline-dark buttonHover rounded-pill mt-3"
-                                    type="button"
-                                    onClick={toggleForecastCollapse}
-                                >
-                                    Ver Pronóstico Extendido
-                                </button>
-                                <div className={`collapse ${isForecastCollapsed ? '' : 'show'}`} id="collapseExample">
-                                <div className="card card-body forecastContainer">
-                                    <Forecast city={data.location.name} />
-                                </div>
-                                </div>
-                            </div>
-                        )}
-                    </div>
+                </div>
+            )}
+        </div>
         <div className="section_map_other">
-                <HomeMap/> 
+            <HomeMap/> 
             <OtherInfo data={data} />
         </div>
     </div>
